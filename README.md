@@ -5,24 +5,22 @@ application up and running.
 
 Things you may want to cover:
 
-* Ruby version
-  ruby 3.2.2 (2023-03-30 revision e51014f9c0) [x86_64-linux]
-* Rails version
-  Rails 7.0.8.1
-* System dependencies
-
-* Configuration
-  cd hotel_booking_api
-  bundle install
-* Database creation
+* Ruby version : 
+  **ruby 3.2.2 (2023-03-30 revision e51014f9c0) [x86_64-linux]
+* Rails version :
+ ** Rails 7.0.8.1
+* Configuration :
+  **cd hotel_booking_api
+  **bundle install
+* Database creation:
   rails db:create
   rails db:migrate
   
-* Database initialization
+* Database initialization:
   rails db:seed
-* How to run the test suite
+* How to run the test suite:
   rspec
-* Services (job queues, cache servers, search engines, etc.)
+* Services (job queues, cache servers, search engines, etc.):
  rails s 
 * Deployment instructions
 
