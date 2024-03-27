@@ -1,0 +1,387 @@
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE DATABASE "booking_dev" ENCODING = 'unicode'[0m
+  [1m[35m (0.5ms)[0m  [1m[35mCREATE DATABASE "booking_test" ENCODING = 'unicode'[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1897892668246753290)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateHotels (20240327040057)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (9.4ms)[0m  [1m[35mCREATE TABLE "hotels" ("id" bigserial primary key, "name" character varying, "location" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1897892668246753290)[0m
+Started PATCH "/bookings/2" for ::1 at 2024-03-27 09:34:58 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::DuplicateMigrationNameError (
+
+Multiple migrations have the name CreateHotels.
+
+):
+  
+activerecord (7.0.8.1) lib/active_record/migration.rb:1433:in `validate'
+activerecord (7.0.8.1) lib/active_record/migration.rb:1306:in `initialize'
+activerecord (7.0.8.1) lib/active_record/migration.rb:1184:in `new'
+activerecord (7.0.8.1) lib/active_record/migration.rb:1184:in `open'
+activerecord (7.0.8.1) lib/active_record/migration.rb:156:in `detailed_migration_message'
+activerecord (7.0.8.1) lib/active_record/migration.rb:147:in `initialize'
+activerecord (7.0.8.1) lib/active_record/migration.rb:662:in `exception'
+activerecord (7.0.8.1) lib/active_record/migration.rb:662:in `raise'
+activerecord (7.0.8.1) lib/active_record/migration.rb:662:in `check_pending!'
+activerecord (7.0.8.1) lib/active_record/migration.rb:627:in `block (2 levels) in call'
+activesupport (7.0.8.1) lib/active_support/file_update_checker.rb:83:in `execute'
+activerecord (7.0.8.1) lib/active_record/migration.rb:632:in `block in call'
+activerecord (7.0.8.1) lib/active_record/migration.rb:624:in `synchronize'
+activerecord (7.0.8.1) lib/active_record/migration.rb:624:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.8.1) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/show_exceptions.rb:29:in `call'
+railties (7.0.8.1) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.8.1) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.8.1) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.8.1) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.8.1) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.8.1) lib/rails/rack/logger.rb:25:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.9) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.8.1) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.9) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.8.1) lib/action_dispatch/middleware/host_authorization.rb:138:in `call'
+railties (7.0.8.1) lib/rails/engine.rb:530:in `call'
+puma (5.6.8) lib/puma/configuration.rb:252:in `call'
+puma (5.6.8) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.8) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.8) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.8) lib/puma/server.rb:443:in `process_client'
+puma (5.6.8) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started PATCH "/bookings/2" for ::1 at 2024-03-27 09:37:17 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BookingsController#update as */*
+  Parameters: {"booking"=>{"check_in_date"=>"2024-04-07", "check_out_date"=>"2024-04-07"}, "id"=>"2"}
+  [1m[36mBooking Load (1.7ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:40:in `set_booking'
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:24:in `update'
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:24:in `update'
+  [1m[36mRoom Load (1.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:24:in `update'
+  [1m[36mBooking Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."room_id" = $1 AND "bookings"."check_in_date" BETWEEN $2 AND $3 LIMIT $4[0m  [["room_id", 8], ["check_in_date", "2024-04-07"], ["check_in_date", "2024-04-07"], ["LIMIT", 1]]
+  ↳ app/models/booking.rb:10:in `check_room_availability'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bookings_controller.rb:24:in `update'
+Completed 422 Unprocessable Entity in 118ms (Views: 0.4ms | ActiveRecord: 23.6ms | Allocations: 28280)
+
+
+Started PATCH "/bookings/2" for ::1 at 2024-03-27 09:37:29 +0530
+Processing by BookingsController#update as */*
+  Parameters: {"booking"=>{"check_in_date"=>"2024-04-08", "check_out_date"=>"2024-04-08"}, "id"=>"2"}
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:40:in `set_booking'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:24:in `update'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:24:in `update'
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:24:in `update'
+  [1m[36mBooking Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."room_id" = $1 AND "bookings"."check_in_date" BETWEEN $2 AND $3 LIMIT $4[0m  [["room_id", 8], ["check_in_date", "2024-04-08"], ["check_in_date", "2024-04-08"], ["LIMIT", 1]]
+  ↳ app/models/booking.rb:10:in `check_room_availability'
+  [1m[36mBooking Update (1.5ms)[0m  [1m[33mUPDATE "bookings" SET "check_in_date" = $1, "check_out_date" = $2, "updated_at" = $3 WHERE "bookings"."id" = $4[0m  [["check_in_date", "2024-04-08"], ["check_out_date", "2024-04-08"], ["updated_at", "2024-03-27 04:07:29.249642"], ["id", 2]]
+  ↳ app/controllers/bookings_controller.rb:24:in `update'
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bookings_controller.rb:24:in `update'
+Completed 200 OK in 23ms (Views: 0.6ms | ActiveRecord: 6.1ms | Allocations: 5792)
+
+
+Started PATCH "/bookings/2" for ::1 at 2024-03-27 09:37:32 +0530
+Processing by BookingsController#update as */*
+  Parameters: {"booking"=>{"check_in_date"=>"2024-04-08", "check_out_date"=>"2024-04-08"}, "id"=>"2"}
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:40:in `set_booking'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:24:in `update'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:24:in `update'
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:24:in `update'
+  [1m[36mBooking Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."room_id" = $1 AND "bookings"."check_in_date" BETWEEN $2 AND $3 LIMIT $4[0m  [["room_id", 8], ["check_in_date", "2024-04-08"], ["check_in_date", "2024-04-08"], ["LIMIT", 1]]
+  ↳ app/models/booking.rb:10:in `check_room_availability'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bookings_controller.rb:24:in `update'
+Completed 422 Unprocessable Entity in 14ms (Views: 0.3ms | ActiveRecord: 2.2ms | Allocations: 4567)
+
+
+Started GET "/hotels?location=CityX" for ::1 at 2024-03-27 11:16:06 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HotelsController#index as */*
+  Parameters: {"location"=>"CityX"}
+  [1m[36mHotel Load (0.8ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."location" = $1[0m  [["location", "CityX"]]
+  ↳ app/controllers/hotels_controller.rb:8:in `index'
+Completed 200 OK in 17ms (Views: 2.4ms | ActiveRecord: 2.8ms | Allocations: 5802)
+
+
+Started GET "/hotels?location=City%20X" for ::1 at 2024-03-27 11:16:12 +0530
+Processing by HotelsController#index as */*
+  Parameters: {"location"=>"City X"}
+  [1m[36mHotel Load (0.6ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."location" = $1[0m  [["location", "City X"]]
+  ↳ app/controllers/hotels_controller.rb:8:in `index'
+Completed 200 OK in 24ms (Views: 18.8ms | ActiveRecord: 4.9ms | Allocations: 4406)
+
+
+Started GET "/hotels?location=City%20X" for ::1 at 2024-03-27 11:21:34 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by HotelsController#index as */*
+  Parameters: {"location"=>"City X"}
+  [1m[36mHotel Load (0.4ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."location" = $1[0m  [["location", "City X"]]
+  ↳ app/controllers/hotels_controller.rb:8:in `index'
+Completed 200 OK in 17ms (Views: 2.3ms | ActiveRecord: 2.2ms | Allocations: 5800)
+
+
+Started GET "/hotels?location=pune" for ::1 at 2024-03-27 11:21:41 +0530
+Processing by HotelsController#index as */*
+  Parameters: {"location"=>"pune"}
+  [1m[36mHotel Load (0.3ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."location" = $1[0m  [["location", "pune"]]
+  ↳ app/controllers/hotels_controller.rb:8:in `index'
+Completed 200 OK in 13ms (Views: 9.8ms | ActiveRecord: 3.2ms | Allocations: 4404)
+
+
+Started GET "/hotels?location=pune" for ::1 at 2024-03-27 11:22:00 +0530
+Processing by HotelsController#index as */*
+  Parameters: {"location"=>"pune"}
+  [1m[36mHotel Load (0.3ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."location" = $1[0m  [["location", "pune"]]
+  ↳ app/controllers/hotels_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.3ms | Allocations: 972)
+
+
+Started POST "/bookings" for ::1 at 2024-03-27 11:22:40 +0530
+Processing by BookingsController#create as */*
+  Parameters: {"booking"=>{"check_in_date"=>"2024-04-01", "check_out_date"=>"2024-04-03", "number_of_rooms"=>2, "room_id"=>1}}
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:8:in `create'
+  [1m[36mRoom Load (0.6ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:8:in `create'
+  [1m[36mBooking Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."room_id" = $1 AND "bookings"."check_in_date" BETWEEN $2 AND $3 LIMIT $4[0m  [["room_id", 1], ["check_in_date", "2024-04-01"], ["check_in_date", "2024-04-03"], ["LIMIT", 1]]
+  ↳ app/models/booking.rb:10:in `check_room_availability'
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bookings_controller.rb:8:in `create'
+Completed 422 Unprocessable Entity in 404ms (Views: 0.2ms | ActiveRecord: 12.0ms | Allocations: 294936)
+
+
+Started POST "/bookings" for ::1 at 2024-03-27 11:23:05 +0530
+Processing by BookingsController#create as */*
+  Parameters: {"booking"=>{"check_in_date"=>"2024-04-01", "check_out_date"=>"2024-04-03", "number_of_rooms"=>2, "room_id"=>1, "user_id"=>1}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:8:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:8:in `create'
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:8:in `create'
+  [1m[36mBooking Exists? (0.6ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."room_id" = $1 AND "bookings"."check_in_date" BETWEEN $2 AND $3 LIMIT $4[0m  [["room_id", 1], ["check_in_date", "2024-04-01"], ["check_in_date", "2024-04-03"], ["LIMIT", 1]]
+  ↳ app/models/booking.rb:10:in `check_room_availability'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bookings_controller.rb:8:in `create'
+Completed 422 Unprocessable Entity in 22ms (Views: 0.2ms | ActiveRecord: 5.0ms | Allocations: 7206)
+
+
+Started POST "/bookings" for ::1 at 2024-03-27 11:23:18 +0530
+Processing by BookingsController#create as */*
+  Parameters: {"booking"=>{"check_in_date"=>"2024-04-03", "check_out_date"=>"2024-04-03", "number_of_rooms"=>2, "room_id"=>1, "user_id"=>1}}
+  [1m[36mTRANSACTION (0.1ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:8:in `create'
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:8:in `create'
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:8:in `create'
+  [1m[36mBooking Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."room_id" = $1 AND "bookings"."check_in_date" BETWEEN $2 AND $3 LIMIT $4[0m  [["room_id", 1], ["check_in_date", "2024-04-03"], ["check_in_date", "2024-04-03"], ["LIMIT", 1]]
+  ↳ app/models/booking.rb:10:in `check_room_availability'
+  [1m[36mBooking Create (0.8ms)[0m  [1m[32mINSERT INTO "bookings" ("check_in_date", "check_out_date", "number_of_rooms", "user_id", "room_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5, $6, $7) RETURNING "id"[0m  [["check_in_date", "2024-04-03"], ["check_out_date", "2024-04-03"], ["number_of_rooms", 2], ["user_id", 1], ["room_id", 1], ["created_at", "2024-03-27 05:53:18.822950"], ["updated_at", "2024-03-27 05:53:18.822950"]]
+  ↳ app/controllers/bookings_controller.rb:8:in `create'
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bookings_controller.rb:8:in `create'
+Completed 201 Created in 13ms (Views: 0.3ms | ActiveRecord: 4.0ms | Allocations: 5082)
+
+
+Started POST "/bookings" for ::1 at 2024-03-27 11:23:33 +0530
+Processing by BookingsController#create as */*
+  Parameters: {"booking"=>{"check_in_date"=>"2024-04-03", "check_out_date"=>"2024-04-03", "number_of_rooms"=>2, "room_id"=>1, "user_id"=>1}}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:8:in `create'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:8:in `create'
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:8:in `create'
+  [1m[36mBooking Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."room_id" = $1 AND "bookings"."check_in_date" BETWEEN $2 AND $3 LIMIT $4[0m  [["room_id", 1], ["check_in_date", "2024-04-03"], ["check_in_date", "2024-04-03"], ["LIMIT", 1]]
+  ↳ app/models/booking.rb:10:in `check_room_availability'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bookings_controller.rb:8:in `create'
+Completed 422 Unprocessable Entity in 14ms (Views: 0.2ms | ActiveRecord: 1.8ms | Allocations: 3959)
+
+
+Started PATCH "/bookings/2" for ::1 at 2024-03-27 11:24:00 +0530
+Processing by BookingsController#update as */*
+  Parameters: {"booking"=>{"check_in_date"=>"2024-04-08", "check_out_date"=>"2024-04-08"}, "id"=>"2"}
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:33:in `set_booking'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:17:in `update'
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:17:in `update'
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:17:in `update'
+  [1m[36mBooking Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."room_id" = $1 AND "bookings"."check_in_date" BETWEEN $2 AND $3 LIMIT $4[0m  [["room_id", 8], ["check_in_date", "2024-04-08"], ["check_in_date", "2024-04-08"], ["LIMIT", 1]]
+  ↳ app/models/booking.rb:10:in `check_room_availability'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bookings_controller.rb:17:in `update'
+Completed 422 Unprocessable Entity in 15ms (Views: 0.2ms | ActiveRecord: 2.3ms | Allocations: 4748)
+
+
+Started PATCH "/bookings/2" for ::1 at 2024-03-27 11:24:14 +0530
+Processing by BookingsController#update as */*
+  Parameters: {"booking"=>{"check_in_date"=>"2024-04-10", "check_out_date"=>"2024-04-10"}, "id"=>"2"}
+  [1m[36mBooking Load (0.5ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:33:in `set_booking'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:17:in `update'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:17:in `update'
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:17:in `update'
+  [1m[36mBooking Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."room_id" = $1 AND "bookings"."check_in_date" BETWEEN $2 AND $3 LIMIT $4[0m  [["room_id", 8], ["check_in_date", "2024-04-10"], ["check_in_date", "2024-04-10"], ["LIMIT", 1]]
+  ↳ app/models/booking.rb:10:in `check_room_availability'
+  [1m[36mBooking Update (0.4ms)[0m  [1m[33mUPDATE "bookings" SET "check_in_date" = $1, "check_out_date" = $2, "updated_at" = $3 WHERE "bookings"."id" = $4[0m  [["check_in_date", "2024-04-10"], ["check_out_date", "2024-04-10"], ["updated_at", "2024-03-27 05:54:14.799506"], ["id", 2]]
+  ↳ app/controllers/bookings_controller.rb:17:in `update'
+  [1m[36mTRANSACTION (2.4ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bookings_controller.rb:17:in `update'
+Completed 200 OK in 16ms (Views: 0.3ms | ActiveRecord: 4.7ms | Allocations: 5423)
+
+
+Started PATCH "/bookings/2" for ::1 at 2024-03-27 11:24:23 +0530
+Processing by BookingsController#update as */*
+  Parameters: {"booking"=>{"check_in_date"=>"2024-04-10", "check_out_date"=>"2024-04-10"}, "id"=>"2"}
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:33:in `set_booking'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:17:in `update'
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:17:in `update'
+  [1m[36mRoom Load (0.3ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1 LIMIT $2[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:17:in `update'
+  [1m[36mBooking Exists? (0.4ms)[0m  [1m[34mSELECT 1 AS one FROM "bookings" WHERE "bookings"."room_id" = $1 AND "bookings"."check_in_date" BETWEEN $2 AND $3 LIMIT $4[0m  [["room_id", 8], ["check_in_date", "2024-04-10"], ["check_in_date", "2024-04-10"], ["LIMIT", 1]]
+  ↳ app/models/booking.rb:10:in `check_room_availability'
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  ↳ app/controllers/bookings_controller.rb:17:in `update'
+Completed 422 Unprocessable Entity in 24ms (Views: 0.2ms | ActiveRecord: 1.9ms | Allocations: 4558)
+
+
+Started GET "/hotels?location=pune" for ::1 at 2024-03-27 11:24:43 +0530
+Processing by HotelsController#index as */*
+  Parameters: {"location"=>"pune"}
+  [1m[36mHotel Load (0.4ms)[0m  [1m[34mSELECT "hotels".* FROM "hotels" WHERE "hotels"."location" = $1[0m  [["location", "pune"]]
+  ↳ app/controllers/hotels_controller.rb:8:in `index'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.4ms | Allocations: 963)
+
+
+Started DELETE "/bookings/2" for ::1 at 2024-03-27 11:25:55 +0530
+Processing by BookingsController#destroy as */*
+  Parameters: {"id"=>"2"}
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/bookings_controller.rb:33:in `set_booking'
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/bookings_controller.rb:26:in `destroy'
+  [1m[36mBooking Destroy (0.5ms)[0m  [1m[31mDELETE FROM "bookings" WHERE "bookings"."id" = $1[0m  [["id", 2]]
+  ↳ app/controllers/bookings_controller.rb:26:in `destroy'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/bookings_controller.rb:26:in `destroy'
+Completed 204 No Content in 9ms (ActiveRecord: 3.5ms | Allocations: 2144)
+
+
+Started GET "/bookings" for ::1 at 2024-03-27 11:27:56 +0530
+Processing by BookingsController#index as */*
+Completed 500 Internal Server Error in 0ms (ActiveRecord: 0.0ms | Allocations: 186)
+
+
+  
+NameError (undefined local variable or method `current_user' for #<BookingsController:0x0000000000cbc0>):
+  
+app/controllers/bookings_controller.rb:6:in `index'
+Started GET "/bookings" for ::1 at 2024-03-27 11:28:19 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BookingsController#index as */*
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 2218)
+
+
+  
+NameError (uninitialized constant BookingsController::Bookings):
+  
+app/controllers/bookings_controller.rb:6:in `index'
+Started GET "/bookings" for ::1 at 2024-03-27 11:28:41 +0530
+Processing by BookingsController#index as */*
+  [1m[36mBooking Load (0.9ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/controllers/bookings_controller.rb:7:in `index'
+  [1m[36mRoom Load (0.7ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" IN ($1, $2)[0m  [["id", 9], ["id", 1]]
+  ↳ app/controllers/bookings_controller.rb:7:in `index'
+Completed 500 Internal Server Error in 71ms (ActiveRecord: 9.8ms | Allocations: 17107)
+
+
+  
+ActiveRecord::AssociationNotFoundError (Association named 'hotel' was not found on Booking; perhaps you misspelled it?):
+  
+app/controllers/bookings_controller.rb:7:in `index'
+Started GET "/bookings" for ::1 at 2024-03-27 11:28:57 +0530
+Processing by BookingsController#index as */*
+  [1m[36mBooking Load (0.3ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/controllers/bookings_controller.rb:7:in `index'
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" IN ($1, $2)[0m  [["id", 9], ["id", 1]]
+  ↳ app/controllers/bookings_controller.rb:7:in `index'
+Completed 500 Internal Server Error in 25ms (ActiveRecord: 7.5ms | Allocations: 8069)
+
+
+  
+ActiveRecord::AssociationNotFoundError (Association named 'hotels' was not found on Booking; perhaps you misspelled it?):
+  
+app/controllers/bookings_controller.rb:7:in `index'
+Started GET "/bookings" for ::1 at 2024-03-27 11:29:49 +0530
+Processing by BookingsController#index as */*
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/controllers/bookings_controller.rb:7:in `index'
+  [1m[36mRoom Load (0.7ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" IN ($1, $2)[0m  [["id", 9], ["id", 1]]
+  ↳ app/controllers/bookings_controller.rb:7:in `index'
+Completed 200 OK in 27ms (Views: 15.6ms | ActiveRecord: 7.5ms | Allocations: 8939)
+
+
+Started GET "/bookings" for ::1 at 2024-03-27 11:33:15 +0530
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by BookingsController#index as */*
+  [1m[36mBooking Load (0.9ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/controllers/bookings_controller.rb:11:in `index'
+  [1m[36mRoom Load (0.7ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" IN ($1, $2)[0m  [["id", 9], ["id", 1]]
+  ↳ app/controllers/bookings_controller.rb:11:in `index'
+Completed 200 OK in 56ms (Views: 33.2ms | ActiveRecord: 9.7ms | Allocations: 18228)
+
+
+Started GET "/bookings?user_id=2" for ::1 at 2024-03-27 11:33:27 +0530
+Processing by BookingsController#index as */*
+  Parameters: {"user_id"=>"2"}
+  [1m[36mBooking Load (0.2ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings" WHERE "bookings"."user_id" = $1[0m  [["user_id", 2]]
+  ↳ app/controllers/bookings_controller.rb:11:in `index'
+  [1m[36mRoom Load (0.2ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" = $1[0m  [["id", 9]]
+  ↳ app/controllers/bookings_controller.rb:11:in `index'
+Completed 200 OK in 5ms (Views: 3.5ms | ActiveRecord: 0.5ms | Allocations: 2305)
+
+
+Started GET "/bookings" for ::1 at 2024-03-27 11:34:12 +0530
+Processing by BookingsController#index as */*
+  [1m[36mBooking Load (0.4ms)[0m  [1m[34mSELECT "bookings".* FROM "bookings"[0m
+  ↳ app/controllers/bookings_controller.rb:11:in `index'
+  [1m[36mRoom Load (0.4ms)[0m  [1m[34mSELECT "rooms".* FROM "rooms" WHERE "rooms"."id" IN ($1, $2)[0m  [["id", 9], ["id", 1]]
+  ↳ app/controllers/bookings_controller.rb:11:in `index'
+Completed 200 OK in 6ms (Views: 5.2ms | ActiveRecord: 0.9ms | Allocations: 2631)
+
+

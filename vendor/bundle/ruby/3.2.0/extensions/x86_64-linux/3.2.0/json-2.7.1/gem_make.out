@@ -1,0 +1,16 @@
+current directory: /home/prajakta_dumbre/hotel_booking_api/vendor/bundle/ruby/3.2.0/gems/json-2.7.1/ext/json
+/home/prajakta_dumbre/.rvm/rubies/ruby-3.2.2/bin/ruby extconf.rb
+creating Makefile
+
+current directory: /home/prajakta_dumbre/hotel_booking_api/vendor/bundle/ruby/3.2.0/gems/json-2.7.1/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20240327-741897-qyyw0b sitelibdir\=./.gem.20240327-741897-qyyw0b clean
+
+current directory: /home/prajakta_dumbre/hotel_booking_api/vendor/bundle/ruby/3.2.0/gems/json-2.7.1/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20240327-741897-qyyw0b sitelibdir\=./.gem.20240327-741897-qyyw0b
+make: Nothing to be done for 'all'.
+
+current directory: /home/prajakta_dumbre/hotel_booking_api/vendor/bundle/ruby/3.2.0/gems/json-2.7.1/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20240327-741897-qyyw0b sitelibdir\=./.gem.20240327-741897-qyyw0b install
+
+current directory: /home/prajakta_dumbre/hotel_booking_api/vendor/bundle/ruby/3.2.0/gems/json-2.7.1/ext/json
+make DESTDIR\= sitearchdir\=./.gem.20240327-741897-qyyw0b sitelibdir\=./.gem.20240327-741897-qyyw0b clean
