@@ -17,25 +17,26 @@ These instructions will get you a copy of the project up and running on your loc
 
 1. Clone the repository:
 
-    bash
+    '''bash
     git clone https://github.com/your-username/hotel_booking_api.git
     cd hotel_booking_api
+   '''
     
 
-2. Install dependencies:
+3. Install dependencies:
 
     bash
     bundle install
     
 
-3. Database creation:
+4. Database creation:
 
     bash
     rails db:create
     rails db:migrate
     
 
-4. Database initialization:
+5. Database initialization:
 
     bash
     rails db:seed
