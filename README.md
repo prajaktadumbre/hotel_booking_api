@@ -1,30 +1,52 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+# Hotel Booking API
 
-Things you may want to cover:
+This API allows you to manage hotel bookings.
 
-* Ruby version : 
-  **ruby 3.2.2 (2023-03-30 revision e51014f9c0) [x86_64-linux]
-* Rails version :
- ** Rails 7.0.8.1
-* Configuration :
-  **cd hotel_booking_api
-  **bundle install
-* Database creation:
-  rails db:create
-  rails db:migrate
-  
-* Database initialization:
-  rails db:seed
-* How to run the test suite:
-  rspec
-* Services (job queues, cache servers, search engines, etc.):
- rails s 
-* Deployment instructions
+## Getting Started
 
-* ...
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+### Prerequisites
+
+- Ruby version: ruby 3.2.2 (2023-03-30 revision e51014f9c0) [x86_64-linux]
+- Rails version: Rails 7.0.8.1
+
+### Installation
+
+1. Clone the repository:
+
+    bash
+    git clone https://github.com/your-username/hotel_booking_api.git
+    cd hotel_booking_api
+    
+
+2. Install dependencies:
+
+    bash
+    bundle install
+    
+
+3. Database creation:
+
+    bash
+    rails db:create
+    rails db:migrate
+    
+
+4. Database initialization:
+
+    bash
+    rails db:seed
+    
+
+## Running the tests
+
+To run the test suite, use RSpec:
+
+```bash
+rspec
 
 * 
 ![Screenshot from 2024-03-27 11-22-16](https://github.com/prajaktadumbre/hotel_booking_api/assets/38855871/8ded621c-b952-44ad-ab16-907f710937e7)
