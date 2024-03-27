@@ -45,10 +45,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 To run the test suite, use RSpec:
 
-```bash
-rspec
+  bash
+  rspec
 
-* 
+## Screenshort
 ![Screenshot from 2024-03-27 11-22-16](https://github.com/prajaktadumbre/hotel_booking_api/assets/38855871/8ded621c-b952-44ad-ab16-907f710937e7)
 ![Screenshot from 2024-03-27 11-34-54](https://github.com/prajaktadumbre/hotel_booking_api/assets/38855871/96f4a19f-3c18-4472-b401-f6d6a6e9a91c)
 ![Screenshot from 2024-03-27 11-23-31](https://github.com/prajaktadumbre/hotel_booking_api/assets/38855871/1290e921-a8a4-492a-9885-bec8facc3f61)
