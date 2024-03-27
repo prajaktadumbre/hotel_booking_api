@@ -17,38 +17,33 @@ These instructions will get you a copy of the project up and running on your loc
 
 1. Clone the repository:
 
-    ''' bash
-    git clone https://github.com/your-username/hotel_booking_api.git
-    cd hotel_booking_api
-    '''
+   - git clone https://github.com/your-username/hotel_booking_api.git
+   - cd hotel_booking_api
+
     
 
 3. Install dependencies:
 
-    bash
+
     bundle install
     
-
 4. Database creation:
 
-    bash
-    rails db:create
-    rails db:migrate
+   - rails db:create
+    -rails db:migrate
     
 
 5. Database initialization:
 
-    bash
     rails db:seed
     
-
 ## Running the tests
 
 To run the test suite, use RSpec:
 
-  bash
   rspec
 
+  
 ## Screenshort
 ![Screenshot from 2024-03-27 11-22-16](https://github.com/prajaktadumbre/hotel_booking_api/assets/38855871/8ded621c-b952-44ad-ab16-907f710937e7)
 ![Screenshot from 2024-03-27 11-34-54](https://github.com/prajaktadumbre/hotel_booking_api/assets/38855871/96f4a19f-3c18-4472-b401-f6d6a6e9a91c)
